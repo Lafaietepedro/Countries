@@ -1,0 +1,30 @@
+header {
+    height: 7vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #2b3743;
+    padding: 0 105px;
+}
+
+header a, header p {
+    color: #fcfefe;
+    text-decoration: none;
+}
+
+#theme:hover {
+    cursor: pointer;
+}
+
+#theme {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header img {
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
+    color: #fcfefe;
+}
