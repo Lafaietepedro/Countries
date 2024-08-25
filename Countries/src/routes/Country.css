@@ -1,0 +1,216 @@
+/* Estilos gerais */
+.back_btn {
+    width: 9vw;
+    height: 5vh;
+    background-color: #2b3743;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 40px 0 40px 40px;
+    border-radius: 5px;
+  }
+  
+  .back_btn:hover {
+    width: 10vw;
+    height: 6vh;
+  }
+  
+  .back_btn a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fcfefe; /* Adicione a cor para o texto */
+    text-decoration: none;
+  }
+  
+  .show_country {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    margin-top: 65px;
+    flex-wrap: wrap; /* Permite que o conteúdo envolva em telas menores */
+  }
+  
+  .show_country_flag img {
+    width: 50vw;
+    height: auto; /* Ajusta a altura automaticamente */
+  }
+  
+  .info_box_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 800px; /* Limita a largura para melhor exibição */
+    width: 100%;
+  }
+  
+  .info_box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+    flex-wrap: wrap; /* Permite que o conteúdo envolva em telas menores */
+  }
+  
+  .show_country_info {
+    margin-right: 90px;
+    text-align: center; /* Centraliza o texto para melhor exibição */
+  }
+  
+  .show_country_info h1 {
+    margin-bottom: 30px;
+  }
+  
+  .show_country_info p {
+    margin-top: 10px;
+  }
+  
+  .show_other_info {
+    margin-bottom: 5px;
+  }
+  
+  .show_other_info p {
+    margin-top: 10px;
+  }
+  
+  .borders_container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Espaçamento entre as caixinhas */
+  }
+  
+  .border_country_box {
+    background-color: #2b3743;
+    padding: 10px 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+    color: #f8f9fa;
+  }
+  
+  .show_country_borders {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .show_country_borders p {
+    margin-right: 10px;
+  }
+  
+  /* Estilos para dispositivos com até 768px de largura (tablet) */
+  @media (max-width: 768px) {
+    .back_btn {
+      width: 12vw;
+      height: 6vh;
+      margin: 20px;
+    }
+  
+    .show_country {
+      flex-direction: column;
+      align-items: center;
+      margin-top: 40px;
+    }
+  
+    .show_country_flag img {
+      width: 70vw;
+      height: auto;
+    }
+  
+    .info_box_container {
+      padding: 0 20px;
+      margin-bottom: 20px;
+    }
+
+    .info_box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 75vw;
+        margin-top: 20px;
+    }
+  
+    .show_country_info,
+    .show_other_info {
+      margin-right: 20px;
+      width: 75vw;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: left;
+    }
+  
+    .show_country_info h1 {
+      font-size: 3.5rem;
+    }
+  
+    .show_country_info p,
+    .show_other_info p {
+      font-size: 1.2rem;
+    }
+  
+    .border_country_box {
+      font-size: 12px;
+      padding: 8px 12px;
+    }
+  }
+  
+  /* Estilos para dispositivos com até 375px de largura (celular) */
+  @media (max-width: 375px) {
+    .back_btn {
+      width: 20vw;
+      height: 7vh;
+      margin: 10px ;
+      margin-left: 20px;
+    }
+  
+    .show_country {
+      flex-direction: column;
+      align-items: center;
+      margin-top: 20px;
+    }
+  
+    .show_country_flag img {
+      width: 80vw;
+      height: auto;
+    }
+  
+    .info_box_container {
+      padding: 0 10px;
+    }
+
+    .show_country_info, .show_other_info {
+        text-align: left;
+        width: 90%;
+    }
+  
+    .show_country_info h1 {
+      font-size: 1.9rem;
+    }
+  
+    .show_country_info p,
+    .show_other_info p {
+      font-size: 0.95rem;
+    }
+  
+    .border_country_box {
+      font-size: 10px;
+      padding: 6px 10px;
+    }
+
+    .info_box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 90vw;
+    }
+  }
+  

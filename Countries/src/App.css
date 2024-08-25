@@ -3,3 +3,34 @@
     padding: 0;
     font-family: 'Nunito Sans';
 }
+
+:root {
+    --bg-color-dark: #202c37;
+    --text-color-dark: #ffffff;
+    --element-color-dark: #2b3945;
+  
+    --bg-color-light: #ffffff;
+    --text-color-light: #111517;
+    --element-color-light: #f2f2f2;
+  }
+  
+  .App.dark {
+    background-color: var(--bg-color-dark);
+    color: var(--text-color-dark);
+  }
+  
+  .App.dark .country_box {
+    background-color: var(--element-color-dark);
+  }
+  
+  .App.light {
+    background-color: var(--bg-color-light);
+    color: var(--text-color-light);
+  }
+  
+  .App.light .country_box {
+    background-color: var(--element-color-light);
+  }
+  
+  /* Continue ajustando os estilos conforme necessário */
+  

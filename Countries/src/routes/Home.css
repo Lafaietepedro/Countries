@@ -1,89 +1,195 @@
+/* Estilos gerais */
 .country_grid {
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    gap: 60px;
-    padding: 50px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 60px;
+  padding: 50px;
+}
+
+.country_box {
+  background-color: #2b3945;
+  width: 20vw;
+  height: auto;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  color: #f8f9fa;
+}
+
+.country_box:hover {
+  width: 21vw;
+}
+
+.flag_box img {
+  width: 100%;
+  height: auto;
+}
+
+.country_info {
+  padding: 16px;
+}
+
+.country_info h2 {
+  margin-bottom: 20px;
+  font-size: 25px;
+}
+
+.country_info p {
+  margin: 4px 0;
+  font-size: 16px;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 50px 50px 0 50px;
+}
+
+.controls input {
+  width: 35vw;
+  height: 7vh;
+  border-radius: 5px;
+  background-color: #2b3945;
+  color: #f8f9fa;
+  border: none;
+  padding-left: 20px;
+}
+
+.controls input::placeholder {
+  font-size: 20px;
+  color: #f8f9fa;
+}
+
+.search-bar {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.controls select {
+  width: 15vw;
+  height: 7vh;
+  border-radius: 5px;
+  border: none;
+  background-color: #2b3945;
+  color: #f8f9fa;
+  padding-left: 20px;
+  font-size: 15px;
+  appearance: none;
+  cursor: pointer;
+}
+
+.fa-caret-down {
+  position: relative;
+  right: 40px;
+}
+
+/* Estilos para dispositivos com até 768px de largura (tablet) */
+@media (max-width: 768px) {
+  .country_grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
   }
-  
+
   .country_box {
-    background-color: #2b3945;
-    width: 20vw;
-    height: auto;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    color: #f8f9fa;
-  }
-  
-  .flag_box img {
     width: 100%;
-    height: auto;
-  }
-  
-  .country_info {
-    padding: 16px;
-  }
-  
-  .country_info h2 {
-    margin-bottom: 20px;
-    font-size: 25px;
-  }
-  
-  .country_info p {
-    margin: 4px 0;
-    font-size: 16px;
   }
 
   .controls {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 50px 50px 0 50px;
-    /* margin: 50px; */
-  }
-  
-  .controls input {
-    width: 35vw;
-    height: 7vh;
-    border-radius: 5px;
-    background-color: #2b3945;
-    color: #f8f9fa;
-    border: none;
+    margin: 20px 20px 0 20px;
+    flex-direction: column;
   }
 
-  .controls input::placeholder {
+  .controls input,
+  .controls select {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .controls input {
+    height: 50px;
+  }
+
+  .controls select {
+    height: 50px;
+  }
+
+  .country_info h2 {
     font-size: 20px;
-    color: #f8f9fa;
-    padding-left: 80px;
+  }
+
+  .country_info p {
+    font-size: 14px;
   }
 
   .search-bar {
-    position: relative;
-    display: flex;
-    align-items: center;
+    width: 50vw;
   }
-  
-  .search-bar i {
-    position: absolute;
-    left: 35px;
-    font-size: 1.2rem;
-    color: #f8f9fa;
-  } 
+
+  .filter {
+    width: 20vw;
+  }
+
+  .filter i {
+    display: none;
+  }
+}
+
+/* Estilos para dispositivos com até 375px de largura (celular) */
+@media (max-width: 375px) {
+  .country_grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .country_box {
+    width: 100%;
+  }
+
+  .controls {
+    margin: 10px;
+    flex-direction: column;
+  }
+
+  .controls input,
+  .controls select {
+    width: 100%;
+    margin-bottom: 8px;
+  }
+
+  .controls input {
+    height: 40px;
+  }
 
   .controls select {
-    width: 15vw;
-    height: 7vh;
-    border-radius: 5px;
-    border: none;
-    background-color: #2b3945;
-    color: #f8f9fa;
-    padding-left: 20px;
-    font-size: 15px;
-    appearance: none;
-    cursor: pointer;
+    height: 40px;
   }
 
-  .fa-caret-down {
-    position: relative;
-    right: 40px;
+  .country_info h2 {
+    font-size: 18px;
   }
+
+  .country_info p {
+    font-size: 12px;
+  }
+
+  .search-bar {
+    width: 65vw;
+  }
+
+  .search-bar input {
+    width: 85vw;
+    text-align: center;
+  }
+
+  .filter {
+    width: 40vw;
+  }
+
+  .filter i {
+    display: none;
+  }
+}

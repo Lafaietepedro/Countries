@@ -38,7 +38,6 @@ const Home = () => {
     <div>
       <div className="controls">
         <div className="search-bar">
-          <i className="fas fa-search"></i>
           <input
             type="text"
             placeholder="Search for a country..."
