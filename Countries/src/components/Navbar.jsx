@@ -1,7 +1,5 @@
 import { Link } from "react-router-dom";
 
-import moonIcon from "../assets/moon-svgrepo-com.svg";
-
 import "./Navbar.css";
 
 const Navbar = () => {

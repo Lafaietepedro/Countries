@@ -1,0 +1,89 @@
+.country_grid {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 60px;
+    padding: 50px;
+  }
+  
+  .country_box {
+    background-color: #2b3945;
+    width: 20vw;
+    height: auto;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    color: #f8f9fa;
+  }
+  
+  .flag_box img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .country_info {
+    padding: 16px;
+  }
+  
+  .country_info h2 {
+    margin-bottom: 20px;
+    font-size: 25px;
+  }
+  
+  .country_info p {
+    margin: 4px 0;
+    font-size: 16px;
+  }
+
+  .controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 50px 50px 0 50px;
+    /* margin: 50px; */
+  }
+  
+  .controls input {
+    width: 35vw;
+    height: 7vh;
+    border-radius: 5px;
+    background-color: #2b3945;
+    color: #f8f9fa;
+    border: none;
+  }
+
+  .controls input::placeholder {
+    font-size: 20px;
+    color: #f8f9fa;
+    padding-left: 80px;
+  }
+
+  .search-bar {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+  .search-bar i {
+    position: absolute;
+    left: 35px;
+    font-size: 1.2rem;
+    color: #f8f9fa;
+  } 
+
+  .controls select {
+    width: 15vw;
+    height: 7vh;
+    border-radius: 5px;
+    border: none;
+    background-color: #2b3945;
+    color: #f8f9fa;
+    padding-left: 20px;
+    font-size: 15px;
+    appearance: none;
+    cursor: pointer;
+  }
+
+  .fa-caret-down {
+    position: relative;
+    right: 40px;
+  }
