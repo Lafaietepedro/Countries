@@ -77,7 +77,7 @@ const Home = () => {
               <div className="country_info">
                 <h2>{flag.name.common}</h2>
                 <p>
-                  <b>Population:</b> {flag.population}
+                  <b>Population:</b> {flag.population.toLocaleString()}
                 </p>
                 <p>
                   <b>Region:</b> {flag.region}
