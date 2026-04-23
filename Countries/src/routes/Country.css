@@ -1,216 +1,220 @@
-/* Estilos gerais */
-.back_btn {
-    width: 9vw;
-    height: 5vh;
-    background-color: #2b3743;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 40px 0 40px 40px;
-    border-radius: 5px;
-  }
-  
-  .back_btn:hover {
-    width: 10vw;
-    height: 6vh;
-  }
-  
-  .back_btn a {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fcfefe; /* Adicione a cor para o texto */
-    text-decoration: none;
-  }
-  
-  .show_country {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    width: 100%;
-    margin-top: 65px;
-    flex-wrap: wrap; /* Permite que o conteúdo envolva em telas menores */
-  }
-  
-  .show_country_flag img {
-    width: 50vw;
-    height: auto; /* Ajusta a altura automaticamente */
-  }
-  
-  .info_box_container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    max-width: 800px; /* Limita a largura para melhor exibição */
-    width: 100%;
-  }
-  
-  .info_box {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 40px;
-    flex-wrap: wrap; /* Permite que o conteúdo envolva em telas menores */
-  }
-  
-  .show_country_info {
-    margin-right: 90px;
-    text-align: center; /* Centraliza o texto para melhor exibição */
-  }
-  
-  .show_country_info h1 {
-    margin-bottom: 30px;
-  }
-  
-  .show_country_info p {
-    margin-top: 10px;
-  }
-  
-  .show_other_info {
-    margin-bottom: 5px;
-  }
-  
-  .show_other_info p {
-    margin-top: 10px;
-  }
-  
-  .borders_container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px; /* Espaçamento entre as caixinhas */
-  }
-  
-  .border_country_box {
-    background-color: #2b3743;
-    padding: 10px 15px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    font-size: 14px;
-    color: #f8f9fa;
-  }
-  
-  .show_country_borders {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 20px;
-  }
-  
-  .show_country_borders p {
-    margin-right: 10px;
-  }
-  
-  /* Estilos para dispositivos com até 768px de largura (tablet) */
-  @media (max-width: 768px) {
-    .back_btn {
-      width: 12vw;
-      height: 6vh;
-      margin: 20px;
-    }
-  
-    .show_country {
-      flex-direction: column;
-      align-items: center;
-      margin-top: 40px;
-    }
-  
-    .show_country_flag img {
-      width: 70vw;
-      height: auto;
-    }
-  
-    .info_box_container {
-      padding: 0 20px;
-      margin-bottom: 20px;
-    }
+.country-page {
+  display: grid;
+  gap: 1.6rem;
+}
 
-    .info_box {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: 75vw;
-        margin-top: 20px;
-    }
-  
-    .show_country_info,
-    .show_other_info {
-      margin-right: 20px;
-      width: 75vw;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: left;
-    }
-  
-    .show_country_info h1 {
-      font-size: 3.5rem;
-    }
-  
-    .show_country_info p,
-    .show_other_info p {
-      font-size: 1.2rem;
-    }
-  
-    .border_country_box {
-      font-size: 12px;
-      padding: 8px 12px;
-    }
-  }
-  
-  /* Estilos para dispositivos com até 375px de largura (celular) */
-  @media (max-width: 375px) {
-    .back_btn {
-      width: 20vw;
-      height: 7vh;
-      margin: 10px ;
-      margin-left: 20px;
-    }
-  
-    .show_country {
-      flex-direction: column;
-      align-items: center;
-      margin-top: 20px;
-    }
-  
-    .show_country_flag img {
-      width: 80vw;
-      height: auto;
-    }
-  
-    .info_box_container {
-      padding: 0 10px;
-    }
+.back-link {
+  width: fit-content;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.8rem 1rem;
+  border-radius: 999px;
+  border: 1px dashed var(--border-color);
+  background: var(--surface-elevated);
+  text-decoration: none;
+  font-weight: 700;
+  box-shadow: var(--shadow-card);
+  transition: transform 180ms ease, border-color 180ms ease;
+}
 
-    .show_country_info, .show_other_info {
-        text-align: left;
-        width: 90%;
-    }
-  
-    .show_country_info h1 {
-      font-size: 1.9rem;
-    }
-  
-    .show_country_info p,
-    .show_other_info p {
-      font-size: 0.95rem;
-    }
-  
-    .border_country_box {
-      font-size: 10px;
-      padding: 6px 10px;
-    }
+.back-link:hover {
+  transform: translateY(-1px);
+  border-color: var(--accent-strong);
+}
 
-    .info_box {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: 90vw;
-    }
+.back-link span:first-child {
+  width: 1.75rem;
+  height: 1.75rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent-color);
+  font-weight: 700;
+}
+
+.country-sheet,
+.country-flag-panel,
+.country-content,
+.detail-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.country-sheet {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.country-flag-panel,
+.country-content {
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-xl);
+  background: var(--surface-elevated);
+  box-shadow: var(--shadow-soft);
+}
+
+.country-flag-panel::before,
+.country-content::before,
+.detail-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, transparent, var(--paper-line), transparent),
+    linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.025));
+  pointer-events: none;
+}
+
+.country-flag-panel {
+  padding: 1rem;
+}
+
+.country-flag-panel img {
+  width: 100%;
+  max-height: 520px;
+  object-fit: cover;
+  border-radius: calc(var(--radius-xl) - 10px);
+  position: relative;
+  z-index: 1;
+}
+
+.country-content {
+  padding: clamp(1.35rem, 2vw, 1.9rem);
+  display: grid;
+  gap: 1rem;
+}
+
+.country-content > * {
+  position: relative;
+  z-index: 1;
+}
+
+.country-content__header {
+  display: grid;
+  gap: 0.55rem;
+}
+
+.country-content__eyebrow {
+  margin: 0;
+  font-size: 0.76rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--accent-color);
+  font-weight: 700;
+}
+
+.country-content__header h1 {
+  margin: 0;
+  font-size: clamp(3rem, 8vw, 4.6rem);
+  line-height: 0.88;
+}
+
+.country-content__subtitle {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+  max-width: 42rem;
+}
+
+.country-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.country-badges span {
+  padding: 0.5rem 0.8rem;
+  border-radius: 999px;
+  background: var(--surface-subtle);
+  color: var(--text-secondary);
+  border: 1px dashed var(--border-color);
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.detail-card {
+  padding: 1.15rem;
+  border-radius: var(--radius-lg);
+  border: 1px dashed var(--border-color);
+  background: linear-gradient(180deg, var(--surface-subtle), transparent);
+}
+
+.detail-card h2 {
+  margin: 0 0 1rem;
+  font-size: 1.9rem;
+  line-height: 0.95;
+  position: relative;
+  z-index: 1;
+}
+
+.detail-card__empty {
+  margin: 0;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  position: relative;
+  z-index: 1;
+}
+
+.info-list {
+  margin: 0;
+  display: grid;
+  gap: 0.9rem;
+  position: relative;
+  z-index: 1;
+}
+
+.info-list--split {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 1.25rem;
+}
+
+.info-list div {
+  display: grid;
+  gap: 0.18rem;
+}
+
+.info-list dt {
+  font-size: 0.76rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.info-list dd {
+  margin: 0;
+  color: var(--text-primary);
+  line-height: 1.55;
+}
+
+.border-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  position: relative;
+  z-index: 1;
+}
+
+.border-link {
+  padding: 0.7rem 0.95rem;
+  border-radius: 999px;
+  text-decoration: none;
+  border: 1px dashed var(--border-color);
+  background: var(--surface-color);
+  font-weight: 700;
+  transition: transform 180ms ease, border-color 180ms ease;
+}
+
+.border-link:hover {
+  transform: translateY(-1px);
+  border-color: var(--accent-strong);
+}
+
+@media (max-width: 720px) {
+  .info-list--split {
+    grid-template-columns: 1fr;
   }
-  
+}

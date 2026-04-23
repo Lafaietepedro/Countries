@@ -1,36 +1,137 @@
-* {
-    margin: 0;
-    padding: 0;
-    font-family: 'Nunito Sans';
+.app-shell {
+  min-height: 100vh;
 }
 
-:root {
-    --bg-color-dark: #202c37;
-    --text-color-dark: #ffffff;
-    --element-color-dark: #2b3945;
-  
-    --bg-color-light: #ffffff;
-    --text-color-light: #111517;
-    --element-color-light: #f2f2f2;
+.page-shell {
+  width: min(1240px, calc(100% - 2rem));
+  margin: 0 auto;
+  padding: 2rem 0 4.5rem;
+}
+
+.status-panel {
+  padding: clamp(1.25rem, 2vw, 1.75rem);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-xl);
+  background: var(--surface-elevated);
+  box-shadow: var(--shadow-soft);
+  position: relative;
+  overflow: hidden;
+}
+
+.status-panel::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, transparent, var(--paper-line), transparent),
+    linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.02));
+  opacity: 0.75;
+  pointer-events: none;
+}
+
+.status-panel h2 {
+  margin: 0 0 0.5rem;
+  font-size: 2rem;
+  line-height: 1;
+  position: relative;
+  z-index: 1;
+}
+
+.status-panel p {
+  margin: 0;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  position: relative;
+  z-index: 1;
+}
+
+.status-panel__actions {
+  margin-top: 1.25rem;
+  position: relative;
+  z-index: 1;
+}
+
+.button-secondary {
+  border: 1px solid var(--border-color);
+  border-radius: 999px;
+  background: var(--accent-color);
+  color: var(--surface-elevated);
+  padding: 0.8rem 1.2rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: transform 180ms ease, border-color 180ms ease;
+}
+
+:root[data-theme='dark'] .button-secondary {
+  color: #16191c;
+}
+
+.button-secondary:hover {
+  transform: translateY(-1px);
+  border-color: var(--accent-strong);
+}
+
+.button-secondary:focus-visible {
+  outline: 3px solid var(--focus-ring);
+  outline-offset: 2px;
+}
+
+.scroll-top-button {
+  position: fixed;
+  right: 1.25rem;
+  bottom: 1.25rem;
+  z-index: 30;
+  border: 1px solid var(--border-color);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--surface-elevated) 92%, transparent);
+  color: var(--text-primary);
+  padding: 0.7rem 0.95rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  box-shadow: var(--shadow-card);
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  pointer-events: none;
+  transition:
+    opacity 180ms ease,
+    transform 180ms ease,
+    visibility 180ms ease,
+    border-color 180ms ease,
+    background-color 180ms ease;
+}
+
+.scroll-top-button.is-visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.scroll-top-button:hover {
+  border-color: var(--accent-strong);
+  background: var(--surface-elevated);
+}
+
+.scroll-top-button:focus-visible {
+  outline: 3px solid var(--focus-ring);
+  outline-offset: 2px;
+}
+
+.scroll-top-button__icon {
+  width: 1rem;
+  height: 1rem;
+  display: block;
+}
+
+@media (max-width: 720px) {
+  .scroll-top-button {
+    right: 1rem;
+    bottom: 1rem;
   }
-  
-  .App.dark {
-    background-color: var(--bg-color-dark);
-    color: var(--text-color-dark);
-  }
-  
-  .App.dark .country_box {
-    background-color: var(--element-color-dark);
-  }
-  
-  .App.light {
-    background-color: var(--bg-color-light);
-    color: var(--text-color-light);
-  }
-  
-  .App.light .country_box {
-    background-color: var(--element-color-light);
-  }
-  
-  /* Continue ajustando os estilos conforme necessário */
-  
+}
